@@ -465,22 +465,23 @@
 			//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			else if (method == 'CE_Variable_Prob') {
 				(function() {
-
-					// VARIABLES
-					if (assess_session.attributes[indice].questionnaire.number == 0) {
-						var min_interval = val_min;
-						var max_interval = val_max;
-						p = 0.5;
-					} else if (assess_session.attributes[indice].questionnaire.number == 1) {
-						var min_interval = assess_session.attributes[indice].questionnaire.points[0][0];
-						var max_interval = val_max;
-						p = 0.25;
-					} else if (assess_session.attributes[indice].questionnaire.number == 2) {
-						var min_interval = val_min;
-						var max_interval = assess_session.attributes[indice].questionnaire.points[0][0];
-						p = 0.75;
+				        function prob() {
+					    if (assess_session.attributes[indice].questionnaire.number == 0) {
+						  var min_interval = val_min;
+						  var max_interval = val_max;
+						  p = 0.5;
+					    } else if (assess_session.attributes[indice].questionnaire.number == 1) {
+						  var min_interval = assess_session.attributes[indice].questionnaire.points[0][0];
+						  var max_interval = val_max;
+						  p = 0.25;
+					    } else if (assess_session.attributes[indice].questionnaire.number == 2) {
+						  var min_interval = val_min;
+						  var max_interval = assess_session.attributes[indice].questionnaire.points[0][0];
+						  p = 0.75;
+					  }
 					}
-
+					// VARIABLES
+                                        var probability = prob() 
 					var L = [0.75 * (max_interval - min_interval) + min_interval, 0.25 * (max_interval - min_interval) + min_interval];
 					var gain = Math.round(random_proba(L[0], L[1]));
 
@@ -493,7 +494,7 @@
 					
 					
 					// SETUP ARBRE GAUCHE
-					arbre_cepv.questions_proba_haut = p;
+					arbre_cepv.questions_proba_haut = prob() ;
 					arbre_cepv.questions_val_max = max_interval + ' ' + unit;
 					arbre_cepv.questions_val_min = min_interval + ' ' + unit;
 					arbre_cepv.questions_val_mean = gain + ' ' + unit;
@@ -529,10 +530,7 @@
 					}
 					
 					
-				        function sync_values() {
-				        arbre_cepv.questions_proba_haut = p;
-				        arbre_cepv.update();
-					}
+
 
 					function treat_answer(data) {
 						min_interval = data.interval[0];
@@ -600,30 +598,7 @@
 			}
 		});
 
-		/// When you click on a QUALITATIVE attribute for assessment
-		$('.answer_quest_quali').click(function() {
-			// we store the name of the attribute
-			var question_id = $(this).attr('id').slice(2).split('_'),
-				question_name = question_id[0],
-				question_val = question_id[1],
-				question_index = question_id[2];
-			
-			// we delete the select div
-			$('#select').hide();
-			$('#attribute_name').show().html(question_name.toUpperCase());
 
-
-			// which index is it ? / which attribute is it ?
-			var indice;
-			for (var j = 0; j < assess_session.attributes.length; j++) {
-				if (assess_session.attributes[j].name == question_name) {
-					indice = j;
-				}
-			}
-
-			var val_min = assess_session.attributes[indice].val_min,
-				val_max = assess_session.attributes[indice].val_max,
-				method = assess_session.attributes[indice].method;
 
 		
 			//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

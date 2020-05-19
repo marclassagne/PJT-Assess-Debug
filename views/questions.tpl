@@ -470,7 +470,7 @@
 					if (assess_session.attributes[indice].questionnaire.number == 0) {
 						var min_interval = val_min;
 						var max_interval = val_max;
-						p = 0.25;
+						p = 0.4;
 					} else if (assess_session.attributes[indice].questionnaire.number == 1) {
 						var min_interval = assess_session.attributes[indice].questionnaire.points[0][0];
 						var max_interval = val_max;

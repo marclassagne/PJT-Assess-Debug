@@ -465,23 +465,21 @@
 			//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			else if (method == 'CE_Variable_Prob') {
 				(function() {
-				        function prob() {
-					    if (assess_session.attributes[indice].questionnaire.number == 0) {
-						  var min_interval = val_min;
-						  var max_interval = val_max;
-						  p = 0.5;
-					    } else if (assess_session.attributes[indice].questionnaire.number == 1) {
-						  var min_interval = assess_session.attributes[indice].questionnaire.points[0][0];
-						  var max_interval = val_max;
-						  p = 0.25;
-					    } else if (assess_session.attributes[indice].questionnaire.number == 2) {
-						  var min_interval = val_min;
-						  var max_interval = assess_session.attributes[indice].questionnaire.points[0][0];
-						  p = 0.75;
-					  }
-					}
 					// VARIABLES
-                                        var probability = prob() 
+					if (assess_session.attributes[indice].questionnaire.number == 0) {
+						var min_interval = val_min;
+						var max_interval = val_max;
+						p = 0.5;
+					} else if (assess_session.attributes[indice].questionnaire.number == 1) {
+						var min_interval = assess_session.attributes[indice].questionnaire.points[0][0];
+						var max_interval = val_max;
+						p = 0.25;
+					} else if (assess_session.attributes[indice].questionnaire.number == 2) {
+						var min_interval = val_min;
+						var max_interval = assess_session.attributes[indice].questionnaire.points[0][0];
+						p = 0.75;
+					}
+ 
 					var L = [0.75 * (max_interval - min_interval) + min_interval, 0.25 * (max_interval - min_interval) + min_interval];
 					var gain = Math.round(random_proba(L[0], L[1]));
 
@@ -494,7 +492,7 @@
 					
 					
 					// SETUP ARBRE GAUCHE
-					arbre_cepv.questions_proba_haut = prob() ;
+					arbre_cepv.questions_proba_haut = p ;
 					arbre_cepv.questions_val_max = max_interval + ' ' + unit;
 					arbre_cepv.questions_val_min = min_interval + ' ' + unit;
 					arbre_cepv.questions_val_mean = gain + ' ' + unit;

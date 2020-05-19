@@ -472,6 +472,7 @@
 						var max_interval = val_max;
 						p = 0.25;
 					} else if (assess_session.attributes[indice].questionnaire.number == 1) {
+                                                console.log(assess_session.attributes[indice].questionnaire.point)
 						var min_interval = assess_session.attributes[indice].questionnaire.points[0][0];
 						var max_interval = val_max;
 						p = 0.5;

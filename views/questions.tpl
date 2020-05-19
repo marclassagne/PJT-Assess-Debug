@@ -472,18 +472,13 @@
 						var max_interval = val_max;
 						p = 0.25;
 					} else if (assess_session.attributes[indice].questionnaire.number == 1) {
-					        for (var key in assess_session.attributes[indice].questionnaire.points){
-                                                        var min_interval = assess_session.attributes[indice].questionnaire.points[key];
-						}
+					        var min_interval = Object.keys(assess_session.attributes[indice].questionnaire.points)[0];
 						var max_interval = val_max;
 						p = 0.5;
 					} else if (assess_session.attributes[indice].questionnaire.number == 2) {
-		                                for (var key in assess_session.attributes[indice].questionnaire.points){
-                                                        max_interval = assess_session.attributes[indice].questionnaire.points[key];
-						}
-						var min_interval = val_min;
-						
-						p = 0.75;
+		                               var max_interval = Object.keys(assess_session.attributes[indice].questionnaire.points)[0];
+					       var min_interval = val_min;
+					       p = 0.75;
 					}
 
 					var L = [0.75 * (max_interval - min_interval) + min_interval, 0.25 * (max_interval - min_interval) + min_interval];

@@ -488,14 +488,13 @@
 
 					var arbre_cepv = new Arbre('cepv', '#trees', settings.display, "CE_PV");
 					 // 
-                                        function sync_values() {
-				        arbre_cepv.questions_proba_haut = p;
-				        arbre_cepv.update();}
+ 
 					
 					
 					
 					// SETUP ARBRE GAUCHE
 					arbre_cepv.questions_proba_haut = p;
+					arbre_cepv.update();
 					arbre_cepv.questions_val_max = max_interval + ' ' + unit;
 					arbre_cepv.questions_val_min = min_interval + ' ' + unit;
 					arbre_cepv.questions_val_mean = gain + ' ' + unit;

@@ -489,8 +489,8 @@
 					var arbre_cepv = new Arbre('cepv', '#trees', settings.display, "CE_PV");
 					 // 
                                         function sync_values() {
-				        arbre_pe.questions_proba_haut = p;
-				        arbre_pe.update();}
+				        arbre_cepv.questions_proba_haut = p;
+				        arbre_cepv.update();}
 					
 					
 					

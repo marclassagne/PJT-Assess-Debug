@@ -468,17 +468,21 @@
 
 					// VARIABLES
 					if (assess_session.attributes[indice].questionnaire.number == 0) {
-						var min_interval = val_min;
+					        var min_interval = val_min;
 						var max_interval = val_max;
 						p = 0.25;
 					} else if (assess_session.attributes[indice].questionnaire.number == 1) {
-                                                console.log(assess_session.attributes[indice].questionnaire.points)
-						var min_interval = assess_session.attributes[indice].questionnaire.points[0][0];
+					        for (var key in assess_session.attributes[indice].questionnaire.points){
+                                                        var min_interval = assess_session.attributes[indice].questionnaire.points[key];
+						}
 						var max_interval = val_max;
 						p = 0.5;
 					} else if (assess_session.attributes[indice].questionnaire.number == 2) {
+		                                for (var key in assess_session.attributes[indice].questionnaire.points){
+                                                        max_interval = assess_session.attributes[indice].questionnaire.points[key];
+						}
 						var min_interval = val_min;
-						var max_interval = assess_session.attributes[indice].questionnaire.points[0][0];
+						
 						p = 0.75;
 					}
 
@@ -585,7 +589,7 @@
 							console.log(data);
 						});
 					});
-				})()
+				})
 			}
 		});
 

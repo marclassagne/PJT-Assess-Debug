@@ -483,7 +483,7 @@
 
 					var L = [0.75 * (max_interval - min_interval) + min_interval, 0.25 * (max_interval - min_interval) + min_interval];
 					var gain = Math.round(random_proba(L[0], L[1]));
-
+                                        console.log(gain)
 					// INTERFACE
 
 					var arbre_cepv = new Arbre('cepv', '#trees', settings.display, "CE_PV");

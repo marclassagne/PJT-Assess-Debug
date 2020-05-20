@@ -499,15 +499,15 @@
 					// we add the choice button
                                         $('#trees').append('<div class=choice style="text-align: center;"><p>Which option do you prefer?</p><button type="button" class="btn btn-default" id="gain">Certain gain</button><button type="button" class="btn btn-default" id="lottery">Lottery</button></div>')
 					
-					function utility_finder(gain) {
+					function utility_finder(g) {
 						var points = assess_session.attributes[indice].questionnaire.points;
-						if (gain == val_min) {
+						if (g == val_min) {
 							if (mode == 'normal') {
 								return 0;
 							} else {
 								return 1;
 							}
-						} else if (gain == val_max) {
+						} else if (g == val_max) {
 							if (mode == 'normal') {
 								return 1;
 							} else {
@@ -515,7 +515,7 @@
 							}
 						} else {
 							for (var key in assess_session.attributes[indice].questionnaire.points) {
-								if (gain == key) {
+								if (g == key) {
 									return assess_session.attributes[indice].questionnaire.points[key];
 								}
 							};

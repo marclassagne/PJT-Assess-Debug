@@ -505,17 +505,9 @@
 						console.log(val_max)
 						console.log(val_min)
 						if (gain == val_min) {
-							if (mode == 'normal') {
-								return 0;
-							} else {
-								return 1;
-							}
+							return (mode == 'Normal' ? 0 : 1);
 						} else if (gain == val_max) {
-							if (mode == 'normal') {
-								return 1;
-							} else {
-								return 0;
-							}
+							return (mode == 'Normal' ? 1 : 0);
 						} else {
 							for (var key in assess_session.attributes[indice].questionnaire.points) {
 								if (gain == key) {

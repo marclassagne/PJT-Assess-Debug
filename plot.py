@@ -172,6 +172,7 @@ def generate_svg_plot_QUALI(dictionary, list_names, width):
 	plt.close()
 
 	'''
+	print("here")
 	ind = np.arange(len(list_names))
 	ax = plt.axes()
         ax.set_xticks(ind + (width / 2))
@@ -182,9 +183,5 @@ def generate_svg_plot_QUALI(dictionary, list_names, width):
 	
         plt.savefig(imgdata, format='svg')
 	plt.close()
-
-
-	
-
 
 	return imgdata.getvalue()

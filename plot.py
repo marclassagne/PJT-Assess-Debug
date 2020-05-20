@@ -172,15 +172,15 @@ def generate_svg_plot_QUALI(dictionary, list_names, width):
 	plt.close()
 
 	'''
-	pos = np.arange(len(dictionary.keys()))
-        width = 1.0     # gives histogram aspect to the bar diagram
-
-        ax = plt.axes()
-        ax.set_xticks(pos + (width / 2))
+	ind = np.arange(len(dictionary.keys())) + .15 # the x locations for the groups
+        width = 1.0 
+        ax.set_xticks(ind + (width / 2))
         ax.set_xticklabels(dictionary.keys())
+        plt.bar(ind, dictionary.values(), width, color='r')
 
-        plt.bar(dictionary.keys(), dictionary.values(), width, color='g')
-       
+
         plt.show()
+	
+
 
 	return imgdata.getvalue()

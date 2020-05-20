@@ -553,18 +553,11 @@
 						$('.final_validation').click(function() {
 							var final_gain = parseInt($('#final_proba').val());
 							var final_utility = arbre_cepv.questions_proba_haut * utility_finder(parseFloat(arbre_cepv.questions_val_max)) + (1 - arbre_cepv.questions_proba_haut) * utility_finder(parseFloat(arbre_cepv.questions_val_min));
+							console.log(final_utility)
 							console.log(arbre_cepv.questions_proba_haut);
 							console.log(utility_finder(parseFloat(arbre_cepv.questions_val_max)));
 							console.log(utility_finder(parseFloat(arbre_cepv.questions_val_min)));
-                                                        if (final_gain <= parseFloat(arbre_cepv.questions_val_max) && final_gain >= parseFloat(arbre_cepv.questions_val_min)) {
-								// we save it
-								assess_session.attributes[indice].questionnaire.points[String(final_gain)]=parseFloat(final_utility);
-								assess_session.attributes[indice].questionnaire.number += 1;
-								// backup local
-								localStorage.setItem("assess_session", JSON.stringify(assess_session));
-								// we reload the page
-								window.location.reload();
-							}
+
 						});
 					}
 

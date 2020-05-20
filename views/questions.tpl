@@ -568,7 +568,7 @@
 								//localStorage.setItem("assess_session", JSON.stringify(assess_session));
 								// we reload the page
 								//window.location.reload();
-							}
+							//}
 							
 						});
 					}

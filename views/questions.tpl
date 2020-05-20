@@ -470,7 +470,7 @@
 					if (assess_session.attributes[indice].questionnaire.number == 0) {
 					        var min_interval = val_min;
 						var max_interval = val_max;
-						p = 0.25;
+						p = 0.75;
 					} else if (assess_session.attributes[indice].questionnaire.number == 1) {
 					        var min_interval = Object.keys(assess_session.attributes[indice].questionnaire.points)[0];
 						var max_interval = val_max;
@@ -478,12 +478,12 @@
 					} else if (assess_session.attributes[indice].questionnaire.number == 2) {
 		                               var max_interval = Object.keys(assess_session.attributes[indice].questionnaire.points)[0];
 					       var min_interval = val_min;
-					       p = 0.75;
+					       p = 0.25;
 					}
 
 					var L = [0.75 * (max_interval - min_interval) + min_interval, 0.25 * (max_interval - min_interval) + min_interval];
 					var gain = Math.round(random_proba(L[0], L[1]));
-                                        console.log(gain)
+                                      
 					// INTERFACE
 
 					var arbre_cepv = new Arbre('cepv', '#trees', settings.display, "CE_PV");
@@ -501,9 +501,6 @@
 					
 					function utility_finder(gain) {
 						var points = assess_session.attributes[indice].questionnaire.points;
-						console.log(gain)
-						console.log(val_max)
-						console.log(val_min)
 						if (gain == val_min) {
 							return (mode == 'Normal' ? 0 : 1);
 						} else if (gain == val_max) {
@@ -517,9 +514,7 @@
 						};
 						
 					}
-					console.log(parseFloat(arbre_cepv.questions_val_max))
 
-					console.log(utility_finder(parseFloat(arbre_cepv.questions_val_max)))
 
 					function treat_answer(data) {
 						min_interval = data.interval[0];

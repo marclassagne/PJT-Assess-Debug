@@ -172,12 +172,14 @@ def generate_svg_plot_QUALI(dictionary, list_names, width):
 	plt.close()
 
 	'''
-	ind = np.arange(len(dictionary.keys()))
+	ind = np.arange(len(list_names))
 	ax = plt.axes()
         ax.set_xticks(ind + (width / 2))
-        ax.set_xticklabels(dictionary.keys())
+        ax.set_xticklabels(list_names)
         plt.bar(ind, dictionary.values(), width, color='r')
 	plt.show()
+	
+	
         plt.savefig(imgdata, format='svg')
 	plt.close()
 

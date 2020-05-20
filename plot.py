@@ -154,6 +154,8 @@ def generate_svg_plot_QUALI(dictionary, list_names, width):
 	imgdata = io.BytesIO()
 
 	# Open a new figure with the right width
+	
+	'''
 	plt.figure(figsize=(width, width))
 	
 	graph_x = list(range(len(dictionary)))
@@ -168,5 +170,17 @@ def generate_svg_plot_QUALI(dictionary, list_names, width):
 
 	plt.savefig(imgdata, format='svg')
 	plt.close()
+
+	'''
+	pos = np.arange(len(dictionary.keys()))
+        width = 1.0     # gives histogram aspect to the bar diagram
+
+        ax = plt.axes()
+        ax.set_xticks(pos + (width / 2))
+        ax.set_xticklabels(dictionary.keys())
+
+        plt.bar(dictionary.keys(), dictionary.values(), width, color='g')
+       
+        plt.show()
 
 	return imgdata.getvalue()

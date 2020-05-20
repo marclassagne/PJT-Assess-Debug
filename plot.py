@@ -177,9 +177,11 @@ def generate_svg_plot_QUALI(dictionary, list_names, width):
         ax.set_xticks(ind + (width / 2))
         ax.set_xticklabels(dictionary.keys())
         plt.bar(ind, dictionary.values(), width, color='r')
+	plt.show()
+        plt.savefig(imgdata, format='svg')
+	plt.close()
 
 
-        plt.show()
 	
 
 

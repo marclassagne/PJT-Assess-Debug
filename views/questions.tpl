@@ -523,6 +523,7 @@
 								}
 							};
 						};
+						console.log(utility_finder(parseFloat(arbre_cepv.questions_val_max))
 					}
 
 					function treat_answer(data) {

@@ -514,12 +514,12 @@
 								return 0;
 							}
 						} else {
-							for (var i = 0; i < points.length; i++) {
-								if (points[i][0] == gain) {
-									return points[i][1];
+							for (var key in assess_session.attributes[indice].questionnaire.points) {
+								if (gain == key) {
+									return assess_session.attributes[indice].questionnaire.points[key];
 								}
-							}
-						}
+							};
+						};
 					}
 
 					function treat_answer(data) {

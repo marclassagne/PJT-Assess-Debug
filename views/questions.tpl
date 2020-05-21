@@ -1057,7 +1057,7 @@
 			}
 			$('#charts_quali').show();
 			$('#charts_quali').append('<table id="curves_choice" class="table"><thead><tr><th>choice</th></tr></thead></table>');
-			$('#curves_choice').append('<tr><td style="text-align:center"><input type="radio" classe="radio_choice" "value="Submit">Table</td><br><tr><td style="text-align:center"><input type="radio" classe="radio_choice_1" "value="Submit">histogram</td></tr>');
+			$('#curves_choice').append('<tr><td style="text-align:center"><input type="radio" classe="radio_choice" value="table">Table</td><br><tr><td style="text-align:center"><input type="radio" classe="radio_choice_1" value="histogram">histogram</td></tr>');
 			$('.radio_choice_1').on('click', function() {
 				$('#main_graph').show().empty();
 				addGraph(list_points, list_names);

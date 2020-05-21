@@ -26,7 +26,7 @@
 </div>
 
 <div id="charts_quali">
-	<h2>Select the regression function you want to use</h2>
+	<h2>Select your choice </h2>
 </div>
 
 

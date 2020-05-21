@@ -1057,7 +1057,13 @@
 
 			
 			console.log(JSON.stringify(json_2_send));
-			$.post('ajax', JSON.stringify(json_2_send), function(data_graph) {
+			$.post('ajax', 
+					JSON.stringify({
+						"type": "svg_QUALI",
+						"data": data_graph,
+						"list_names": names_graph,
+						"width": 6
+				}), function(data2) {
 			});
 			
 			//$('#main_graph').show().empty();

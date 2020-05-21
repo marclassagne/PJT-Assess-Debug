@@ -1063,6 +1063,9 @@
 				$('#functions').show().empty();
 				addGraph(list_points, list_names);
 			});
+			$('.radio_choice_1').on('click', function() {
+	
+			});
 	
 			
 		});

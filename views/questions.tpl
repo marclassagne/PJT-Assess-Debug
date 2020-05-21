@@ -25,6 +25,10 @@
 	<h2>Select the regression function you want to use</h2>
 </div>
 
+<div id="charts_quali">
+	<h2>Select the regression function you want to use</h2>
+</div>
+
 
 <div id="main_graph" class="col-lg-5"></div>
 <div id="functions" class="col-lg-7"></div>
@@ -44,6 +48,7 @@
 		$('li.questions').addClass("active");
 		$('#attribute_name').hide();
 		$('#charts').hide();
+		$('#charts_quali').hide();
 		$('#main_graph').hide();
 		$('#functions').hide();
 
@@ -1050,8 +1055,8 @@
 					$('#main_graph').append(data2);
 				});
 			}
-			$('#quali').show();
-			$('#quali').append('<table id="curves_choice" class="table"><thead><tr><th></th><th>choice</th><th>type</th></tr></thead></table>');
+			$('#charts_quali').show();
+			$('#charts_quali').append('<table id="curves_choice" class="table"><thead><tr><th></th><th>choice</th><th>type</th></tr></thead></table>');
 			///$('#curves_choice').append('<tr><td><input type="radio" class="radio_choice" name="select" value=' + i + '></td><td>' haha '</td><td>' hihi '</td></tr>');
 			$('.radio_choice').on('click', function() {
 				$('#main_graph').show().empty();

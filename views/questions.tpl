@@ -1055,7 +1055,7 @@
 			$('.radio_choice').on('click', function() {
 				$('#main_graph').show().empty();
 				addGraph(list_points, list_names);
-			}
+			});
 	
 			
 		});

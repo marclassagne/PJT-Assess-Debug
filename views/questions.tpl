@@ -1058,7 +1058,7 @@
 			
 			console.log(JSON.stringify(json_2_send));
 			$.post('ajax', JSON.stringify(json_2_send), function(data) {
-			}
+			});
 			
 			//$('#main_graph').show().empty();
 			//addGraph(list_points, list_names);

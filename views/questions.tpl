@@ -1041,7 +1041,7 @@
 			};
 			json_2_send["points"] = points;
 			console.log(points);
-			console.log(function(data));
+			console.log(function(data_graph));
 			
 			function addGraph(data_graph, names_graph) {
 				$.post('ajax', 

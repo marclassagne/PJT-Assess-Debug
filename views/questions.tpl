@@ -1049,6 +1049,11 @@
 					$('#main_graph').append(data2);
 				});
 			}
+			$('#charts').show();
+			$('#charts').append('<table id="curves_choice" class="table"><thead><tr><th></th><th>Points used</th><th>Available regressions: r2</th></tr></thead></table>');
+			$('#curves_choice').append('<tr><td><input type="radio" class="radio_choice" name="select" value=' + i + '></td><td>' + data['data'][i]['points'] + '</td><td>' + regressions_text + '</td></tr>');
+			$('.radio_choice').on('click', function() {
+					
 
 			
 			

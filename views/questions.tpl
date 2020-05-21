@@ -1058,7 +1058,7 @@
 			$('#charts_quali').show();
 			$('#charts_quali').append('<table id="curves_choice" class="table"><thead><tr><th>Choices</th></tr></thead></table>');
 			$('#curves_choice').append('<tr><td style="text-align:center"><input type="radio" name="choice" classe="radio_choice" value="table">Table</td><br><tr><td style="text-align:center"><input type="radio" name="choice" classe="radio_choice_1" value="histogram">histogram</td></tr>');
-			$('.radio_choice_1').on('click', function() {
+			$('.radio_choice').on('click', function() {
 				$('#main_graph').show().empty();
 				$('#functions').show().empty();
 				addGraph(list_points, list_names);

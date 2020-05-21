@@ -977,7 +977,7 @@
 				return text;
 			}
 
-			console.log(function(data));
+		
 			$.post('ajax', JSON.stringify(json_2_send), function(data) {
 				$('#charts').show();
 				if (val_min<0){

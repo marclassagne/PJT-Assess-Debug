@@ -1059,7 +1059,7 @@
 			console.log(JSON.stringify(json_2_send));
 			$.post('ajax', JSON.stringify(json_2_send),function(data2) {
 	
-				});
+				
 			});
 			
 			//$('#main_graph').show().empty();

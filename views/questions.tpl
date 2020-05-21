@@ -1056,8 +1056,8 @@
 				});
 			}
 			$('#charts_quali').show();
-			$('#charts_quali').append('<table id="curves_choice" class="table"><thead><tr><th></th><th>choice</th><th>type</th></tr></thead></table>');
-			$('#curves_choice').append('<tr><td style="text-align:center"><input type="radio" classe=radio_choice" "value="Submit"> Table </td><br><tr><td><input type="radio" classe=radio_choice_1" "value="Submit"><td style="text-align:center"> happy </td></tr>');
+			$('#charts_quali').append('<table id="curves_choice" class="table"><thead><tr><th>choice</th></tr></thead></table>');
+			$('#curves_choice').append('<tr><td style="text-align:center"><input type="radio" classe=radio_choice" "value="Submit">Table</td><br><tr><td style="text-align:center"><input type="radio" classe=radio_choice_1" "value="Submit">happy</td></tr>');
 			$('.radio_choice').on('click', function() {
 				$('#main_graph').show().empty();
 				addGraph(list_points, list_names);

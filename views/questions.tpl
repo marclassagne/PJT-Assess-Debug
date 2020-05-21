@@ -1065,12 +1065,12 @@
 			json_2_send["points"] = points;
 			console.log(points);
 			
-			$.post('ajax', JSON.stringify(json_2_send), function(data) {
+			$.post('ajax', JSON.stringify(json_2_send), function(data_graph) {
 				$('#charts').show();
 				if (val_min<0){
-					for (i in data['data']){
-						for (j in data['data'][i]['coord']){
-							data['data'][i]['coord'][j][0]+=val_min;
+					for (i in data_graph['data']){
+						for (j in names_graph['data']){
+							names_graph['data'][j][0]+=val_min;
 						};
 					};
 				}

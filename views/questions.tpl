@@ -1054,18 +1054,16 @@
 					$('#main_graph').append(data2);
 				});
 			}
+			console.log(data_graph)
+			console.log(names_graph)
+			
 			console.log(JSON.stringify(json_2_send));
 			
 			//$('#main_graph').show().empty();
 			//addGraph(list_points, list_names);
 			
-			var json_2_send = {
-				"type": "calc_util_multi"
-			};
-			json_2_send["points"] = points;
-			console.log(points);
+
 			
-			$.post('ajax', JSON.stringify(json_2_send), function(data_graph) {
 
 			});
 			

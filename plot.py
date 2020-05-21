@@ -148,41 +148,29 @@ def pie_chart(names, probas):
 
     return imgdata.getvalue()
 
-def generate_svg_plot_QUALI(dictionary, list_names, width):
-
-	# img
-	imgdata = io.BytesIO()
-
+def generate_svg_plot_QUALI (dictionary, list_names, width) :
+    imgdata = io.BytesIO()
 	# Open a new figure with the right width
+    plt.figure(figsize=(width, width))
 	
+	# graph_x = list(range(len(dictionary)))
+	# graph_y = dictionary
+	
+	# plt.figure(1)
+	# plt.plot(graph_x, graph_y, 'r')
+	# plt.plot([0, graph_x[-1]], [0, 1], 'k')
+	# plt.axis([0, graph_x[-1], 0, 1])
+	# plt.grid()
+	# plt.xticks(graph_x, list_names)
 
-	plt.figure(figsize=(width, width))
-	'''
-	graph_x = list(range(len(dictionary)))
-	graph_y = dictionary
-	
-	plt.figure(1)
-	plt.plot(graph_x, graph_y, 'r')
-	plt.plot([0, graph_x[-1]], [0, 1], 'k')
-	plt.axis([0, graph_x[-1], 0, 1])
-	plt.grid()
-	plt.xticks(graph_x, list_names)
+	# plt.savefig(imgdata, format='svg')
+	# plt.close()
 
-	plt.savefig(imgdata, format='svg')
-	plt.close()
+    print("here")
+    ind = np.array(range(len(list_names)))
+    plt.bar(ind, dictionary.values(), width, color='r')
+    plt.show()
+    plt.savefig(imgdata, format='svg')
+    plt.close()
+    return imgdata.getvalue()
 
-	'''
-	
-	print("here")
-	ind = np.array(range(len(list_names)))
-	ax = plt.axes()
-        #ax.set_xticks(ind + (width / 2))
-        ax.set_xticklabels(list_names)
-        plt.bar(ind, dictionary.values(), width, color='r')
-	plt.show()
-	
-	
-        plt.savefig(imgdata, format='svg')
-	plt.close()
-
-	return imgdata.getvalue()

@@ -1036,6 +1036,11 @@
 			for (var ii=0, len=list_names.length; ii<len; ii++) {
 				list_points.push(points[list_names[ii]]);
 			};
+			var json_2_send = {
+			"type": "calc_util_multi"
+			};
+			json_2_send["points"] = points;
+			console.log(points);
 			
 			function addGraph(data_graph, names_graph) {
 				$.post('ajax', 

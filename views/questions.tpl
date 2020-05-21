@@ -1067,13 +1067,7 @@
 			
 			$.post('ajax', JSON.stringify(json_2_send), function(data_graph) {
 				$('#charts').show();
-				if (val_min<0){
-					for (i in data_graph['data']){
-						for (j in names_graph['data']){
-							names_graph['data'][j][0]+=val_min;
-						};
-					};
-				}
+
 				console.log(JSON.stringify(json_2_send));
 				
 				

@@ -1039,8 +1039,10 @@
 			var json_2_send = {
 			"type": "calc_util_multi"
 			};
+		
 			json_2_send["points"] = points;
 			console.log(points);
+			console.log(data)
 			
 			
 			function addGraph(data_graph, names_graph) {

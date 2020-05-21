@@ -24,9 +24,7 @@
 <div id="charts">
 	<h2>Select the regression function you want to use</h2>
 </div>
-<div id="quali">
-	<h2>Select your choice </h2>
-</div>
+
 
 <div id="main_graph" class="col-lg-5"></div>
 <div id="functions" class="col-lg-7"></div>
@@ -46,7 +44,6 @@
 		$('li.questions').addClass("active");
 		$('#attribute_name').hide();
 		$('#charts').hide();
-		$('#quali').hide();
 		$('#main_graph').hide();
 		$('#functions').hide();
 

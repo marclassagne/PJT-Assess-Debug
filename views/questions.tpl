@@ -1049,11 +1049,11 @@
 						"data": data_graph,
 						"list_names": names_graph,
 						"width": 6
-					}), 
-				function(data2) {
+				}), function(data2) {
 					$('#main_graph').append(data2);
 				});
 			}
+			console.log(JSON.stringify(json_2_send));
 			
 			//$('#main_graph').show().empty();
 			//addGraph(list_points, list_names);

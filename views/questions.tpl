@@ -1066,7 +1066,7 @@
 				addGraph(list_points, list_names);
 			});
 			$('.radio_choice_1').on('click', function() {
-				$('#curves_choice').append('<table style="width:100%"><tr><th>value</th><th>utility</th>
+				$('#curves_choice').append('<table style="width:100%"><tr><th>value</th><th>utility</th></tr></table>')
 				for (var i = 0; i < list_points.length; i++) {
 					$('#curves_choice').append('<table style="width:100%"><tr><td>list_names[i]</td><td>list_points[i]</td></tr></table>')
 	

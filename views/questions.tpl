@@ -1066,7 +1066,9 @@
 				addGraph(list_points, list_names);
 			});
 			$('.radio_choice_1').on('click', function() {
-				$('#curves_choice').append('<table style="width:100%"><tr><th>value</th><th>utility</th></tr><tr><td>Jill</td><td>Smith</td><td>50</td></tr><tr><td>Eve</td><td>Jackson</td><td>94</td></tr><tr><td>John</td><td>Doe</td><td>80</td></tr></table>')
+				$('#curves_choice').append('<table style="width:100%"><tr><th>value</th><th>utility</th>
+				for (var i = 0; i < list_points.length; i++) {
+					$('#curves_choice').append('<table style="width:100%"><tr><td>list_names[i]</td><td>list_points[i]</td></tr></table>')
 	
 			});
 	

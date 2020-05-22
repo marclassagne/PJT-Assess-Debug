@@ -1075,13 +1075,11 @@
 				$('#main_graph').hide().empty();
 				$('#functions').hide().empty();
 				$('#data_show').show().empty();
-				$('#data_show').append('<table id= "table_info"  style="  width:100%;"> <thead><tr><th>value</th><th>utility</th></tr></thead>');
+				$('#data_show').append('<table   style="  width:100%;"> <thead><tr><th>value</th><th>utility</th></tr></thead><tbody id="table_info"></tbody>');
 				for (var i = 0; i < list_points.length; i++) 
 				{
 				$('#table_info').append('<tr><td>'+list_names[i]+'</td><td>'+list_points[i]+'</td></tr>');
 				};
-				$('#data_show').append('</tbody>');
-				$('#data_show').append('</table>');
 			}
 
 			$('.Table_choice').on('click',table_choice);

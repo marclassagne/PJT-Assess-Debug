@@ -1068,7 +1068,7 @@
 				addGraph(list_points, list_names);
 			}
 
-			function() {
+			function histogram() {
 				console.log("hello2")
 				$('#curves_choice').append('<table style="width:100%"><tr><th>value</th><th>utility</th></tr></table>')
 				

@@ -1107,7 +1107,7 @@
 	}
 	
 	tr:nth-child(even) {
-	  background-color: #a1a1a1;
+	  background-color: #e2e2e2;
 	}
 	</style>
 </body>

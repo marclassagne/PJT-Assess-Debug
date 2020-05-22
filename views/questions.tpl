@@ -1063,6 +1063,7 @@
 			
 			function histogram() {
 				console.log("hello");
+				$('#curves_choice').hide().empty();
 				$('#main_graph').show().empty();
 				$('#functions').show().empty();
 				addGraph(list_points, list_names);
@@ -1070,20 +1071,19 @@
 
 			function table_choice() {
 				
-				$('#main_graph').hide();
-				$('#functions').hide();
-				$('#curves_choice').append('<table  style="  border: 1px solid black; width:100%;"><tr> <th>value</th><th>utility</th> </tr>');
+				$('#main_graph').hide().empty();
+				$('#functions').hide().empty();
+				$('#curves_choice').empty();
+				$('#curves_choice').append('<table  style="  width:100%;"><tr> <th>value</th><th>utility</th> </tr>');
 				for (var i = 0; i < list_points.length; i++) 
 				{
 				$('#curves_choice').append('<tr><td>'+list_names[i]+'</td><td>'+list_points[i]+'</td></tr>');
 				};
 				$('#curves_choice').append('</table>');
 			}
-			$('.Table_choice').on('click',table_choice);
-			$('.Histogram').on('click',histogram);
 
-	
-			
+			$('.Table_choice').on('click',table_choice);
+			$('.Histogram').on('click',histogram);			
 		});
 				
 		
@@ -1094,5 +1094,4 @@
 <!-- Library to copy into clipboard -->
 <script src="{{ get_url('static', path='js/clipboard.min.js') }}"></script>
 </body>
-<
 </html>

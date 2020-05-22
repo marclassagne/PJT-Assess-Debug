@@ -1076,9 +1076,10 @@
 				{
 				$('#curves_choice').append('<table style="width:100%"><tr><td>'+list_names[i]+'</td><td>'+list_points[i]+'</td></tr></table>')
 				};
-	
 			}
-			$(':input[type=radio]').on('click',table_choice);
+			$('.Table_choice').on('click',table_choice);
+			$('.Histogram').on('click',histogram);
+
 	
 			
 		});

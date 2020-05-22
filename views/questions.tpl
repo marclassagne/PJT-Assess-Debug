@@ -1060,8 +1060,8 @@
 			$('#charts_quali').show();
 			$('#charts_quali').append('<table id="curves_choice" class="table"><thead><tr><th>Choices</th></tr></thead>');
 			$('#curves_choice').append('<tbody><tr><td style="text-align:center"><input class="Table_choice" type="radio" name="choice"  value="table">Table</td>')
-			$('#curves_choice').append('<tr><td style="text-align:center"><input  class="Histogram" type="radio" name="choice"  value="histogram">histogram</td></tr></tbody></table>');
-			$('#curves_choice').append("<div id='data_show'></div>")
+			$('#curves_choice').append('<tr><td style="text-align:center"><input  class="Histogram" type="radio" name="choice"  value="histogram">histogram</td></tr></tbody>');
+			$('#curves_choice').append("</table><div id='data_show'></div>")
 
 			function histogram() {
 				$('#data_show').hide().empty();

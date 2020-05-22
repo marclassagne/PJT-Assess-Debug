@@ -1061,11 +1061,13 @@
 			$('#charts_quali').append('<table id="curves_choice" class="table"><thead><tr><th>Choices</th></tr></thead></table>');
 			$('#curves_choice').append('<tr><td style="text-align:center"><input type="radio" name="choice" classe="radio_choice" value="table">Table</td><br><tr><td style="text-align:center"><input type="radio" name="choice" classe="radio_choice_1" value="histogram">histogram</td></tr>');
 			$('.radio_choice').on('click', function() {
+			        console.log("hello")
 				$('#main_graph').show().empty();
 				$('#functions').show().empty();
 				addGraph(list_points, list_names);
 			});
 			$('.radio_choice_1').on('click', function() {
+				console.log("hello2")
 				$('#curves_choice').append('<table style="width:100%"><tr><th>value</th><th>utility</th></tr></table>')
 				for (var i = 0; i < list_points.length; i++) {
 					$('#curves_choice').append('<table style="width:100%"><tr><td>list_names[i]</td><td>list_points[i]</td></tr></table>')

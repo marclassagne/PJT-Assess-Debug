@@ -1075,7 +1075,7 @@
 				$('#main_graph').hide().empty();
 				$('#functions').hide().empty();
 				$('#data_show').show().empty();
-				$('#data_show').append('<table  style="  width:100%;"> <thead><tr><th>value</th><th>utility</th></tr></thead><tbody>');
+				$('#data_show').append('<table  style="  width:100%;"> <thead><tr><th>value</th><th>utility</th></tr></thead>');
 				for (var i = 0; i < list_points.length; i++) 
 				{
 				$('#data_show').append('<tr><td>'+list_names[i]+'</td><td>'+list_points[i]+'</td></tr>');

@@ -1059,10 +1059,11 @@
 			console.log(list_names)
 			$('#charts_quali').show();
 			$('#charts_quali').append('<table id="curves_choice" class="table"><thead><tr><th>Choices</th></tr></thead></table>');
-			$('#curves_choice').append('<tr><td style="text-align:center"><input class="Table_choice" type="radio" name="choice"  value="table">Table</td><br><tr><td style="text-align:center"><input  class="Histogram" type="radio" name="choice"  value="histogram">histogram</td></tr>');
+			$('#curves_choice').append('<tr><td style="text-align:center"><input class="Table_choice" type="radio" name="choice"  value="table">Table</td>')
+			$('#curves_choice').append('<br><tr><td style="text-align:center"><input  class="Histogram" type="radio" name="choice"  value="histogram">histogram</td></tr>');
 			$('#curves_choice').append("<div id='data_show'></div>")
+
 			function histogram() {
-				console.log("hello");
 				$('#data_show').hide().empty();
 				$('#main_graph').show().empty();
 				$('#functions').show().empty();
@@ -1073,7 +1074,7 @@
 				
 				$('#main_graph').hide().empty();
 				$('#functions').hide().empty();
-				$('#data_show').empty();
+				$('#data_show').show().empty();
 				$('#data_show').append('<table  style="  width:100%;"> <thead><tr><th>value</th><th>utility</th></tr></thead>');
 				$('#data_show').append('<tbody>');
 				for (var i = 0; i < list_points.length; i++) 
@@ -1085,7 +1086,7 @@
 			}
 
 			$('.Table_choice').on('click',table_choice);
-			$('.Histogram').on('click',histogram);			
+			$('.Histogram').on('click',histogram);		
 		});
 				
 		

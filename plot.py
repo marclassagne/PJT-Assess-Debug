@@ -167,7 +167,6 @@ def generate_svg_plot_QUALI (dictionary, list_names, width) :
     #ind = np.array(range(len(list_names)))
     plt.bar(graph_x, graph_y, color='r')
     plt.savefig(imgdata, format='svg')
-    
     plt.close()
     return imgdata.getvalue()
 

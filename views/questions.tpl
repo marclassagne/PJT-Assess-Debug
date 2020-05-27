@@ -1053,7 +1053,7 @@
 			$('#charts_quali').append("</table><div id='data_show'></div>")
 
 		
-			}
+			
 
 			function table_choice() {
 				

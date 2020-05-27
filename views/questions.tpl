@@ -1044,17 +1044,7 @@
 			};
 			
 			
-			function addGraph(data_graph, names_graph) {
-				$.post('ajax', 
-					JSON.stringify({
-						"type": "svg_QUALI",
-						"data": data_graph,
-						"list_names": names_graph,
-						"width": 6
-				}), function(data2) {
-					$('#main_graph').append(data2);
-				});
-			}
+
 			console.log(list_points)
 			console.log(list_names)
 			$('#charts_quali').show();
@@ -1063,11 +1053,7 @@
 			$('#curves_choice').append('<tr><td style="text-align:center"><input  class="Histogram" type="radio" name="choice"  value="histogram">histogram</td></tr></tbody>');
 			$('#charts_quali').append("</table><div id='data_show'></div>")
 
-			function histogram() {
-				$('#data_show').hide().empty();
-				$('#main_graph').show().empty();
-				$('#functions').show().empty();
-				addGraph(list_points, list_names);
+		
 			}
 
 			function table_choice() {
@@ -1083,7 +1069,7 @@
 			}
 
 			$('.Table_choice').on('click',table_choice);
-			$('.Histogram').on('click',histogram);		
+					
 		});
 				
 		

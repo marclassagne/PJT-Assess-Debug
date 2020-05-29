@@ -484,7 +484,7 @@
 					}
 
 					var L = [0.75 * (max_interval - min_interval) + min_interval, 0.25 * (max_interval - min_interval) + min_interval];
-					var gain = random_proba(L[0], L[1]);
+					var gain = math.round(random_proba(L[0], L[1]));
                                       
 					// INTERFACE
 
@@ -528,7 +528,7 @@
 							$('#lottery').hide();
 							arbre_cepv.questions_val_mean = gain + ' ' + unit;
 							arbre_cepv.update();
-							ask_final_value(((max_interval + min_interval) * 100 / 2) / 100);
+							ask_final_value(math.round((max_interval + min_interval) * 100 / 2) / 100);
 						} else {
 							arbre_cepv.questions_val_mean = gain + ' ' + unit;
 							arbre_cepv.update();
@@ -547,7 +547,7 @@
 
 						// when the user validate
 						$('.final_validation').click(function() {
-							var final_gain = parseInt($('#final_proba').val());
+							var final_gain = parseFloat($('#final_proba').val());
 							var final_utility = arbre_cepv.questions_proba_haut;
 							console.log(final_utility)
 							console.log(final_gain);

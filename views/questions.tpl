@@ -556,18 +556,18 @@
 							console.log(utility_finder(parseFloat(arbre_cepv.questions_val_max)));
 							console.log(utility_finder(parseFloat(arbre_cepv.questions_val_min)));
                                                         
-							// if (final_gain <= parseFloat(arbre_cepv.questions_val_max) && final_gain >= parseFloat(arbre_cepv.questions_val_min)) {
+							//if (final_gain <= parseFloat(arbre_cepv.questions_val_max) && final_gain >= parseFloat(arbre_cepv.questions_val_min)) {
 								// we save it
-								assess_session.attributes[indice].questionnaire.points[String(final_gain)]=parseFloat(final_utility);
+								//assess_session.attributes[indice].questionnaire.points[String(final_gain)]=parseFloat(final_utility);
 								
-								assess_session.attributes[indice].questionnaire.points[String(final_gain)]=final_proba;
+								//assess_session.attributes[indice].questionnaire.points[String(final_gain)]=final_proba;
 								
-								assess_session.attributes[indice].questionnaire.number += 1;
+								//assess_session.attributes[indice].questionnaire.number += 1;
 								// backup local
-								localStorage.setItem("assess_session", JSON.stringify(assess_session));
+								//localStorage.setItem("assess_session", JSON.stringify(assess_session));
 								// we reload the page
-								window.location.reload();
-							}
+								//window.location.reload();
+							//}
 							
 						});
 					}

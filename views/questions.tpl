@@ -426,7 +426,7 @@
 
 						// when the user validate
 						$('.final_validation').click(function() {
-							var final_gain = parseInt($('#final_proba').val());
+							var final_gain = parseFloat($('#final_proba').val());
 							var final_utility = arbre_ce.questions_proba_haut * utility_finder(parseFloat(arbre_ce.questions_val_max)) + (1 - arbre_ce.questions_proba_haut) * utility_finder(parseFloat(arbre_ce.questions_val_min));
 							console.log(arbre_ce.questions_proba_haut);
 							console.log(utility_finder(parseFloat(arbre_ce.questions_val_max)));

@@ -423,6 +423,7 @@
 						 <= <input type="text" class="form-control" id="final_proba" placeholder="Probability" value="' + val + '" style="width: 100px; display: inline-block"> <= ' + max_interval +
 							'</p><button type="button" class="btn btn-default final_validation">Validate</button></div>'
 						);
+						console.log(assess_session.attributes[indice].questionnaire.number);
 
 						// when the user validate
 						$('.final_validation').click(function() {

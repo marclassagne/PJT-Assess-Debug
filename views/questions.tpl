@@ -473,18 +473,14 @@
 				(function() {
 
 					// VARIABLES
+					var min_interval = val_min;
+					var max_interval = val_max;
 					if (assess_session.attributes[indice].questionnaire.number == 0) {
-					        var min_interval = val_min;
-						var max_interval = val_max;
 						p = 0.25;
 					} else if (assess_session.attributes[indice].questionnaire.number == 1) {
-					        var min_interval = Object.keys(assess_session.attributes[indice].questionnaire.points)[0];
-						var max_interval = val_max;
 						p = 0.5;
 					} else if (assess_session.attributes[indice].questionnaire.number == 2) {
-		                               var max_interval = Object.keys(assess_session.attributes[indice].questionnaire.points)[0];
-					       var min_interval = val_min;
-					       p = 0.75;
+		                 		p = 0.75;
 					}
 
 					var L = [0.75 * (max_interval - min_interval) + min_interval, 0.25 * (max_interval - min_interval) + min_interval];
@@ -552,7 +548,7 @@
 						// when the user validate
 						$('.final_validation').click(function() {
 							var final_gain = parseInt($('#final_proba').val());
-							var final_utility = arbre_cepv.questions_proba_haut * utility_finder(parseFloat(arbre_cepv.questions_val_max)) + (1 - arbre_cepv.questions_proba_haut) * utility_finder(parseFloat(arbre_cepv.questions_val_min));
+							var final_utility = arbre_cepv.questions_proba_haut;
 							console.log(final_utility)
 							console.log(parseFloat(arbre_cepv.questions_val_max))
 							console.log(parseFloat(arbre_cepv.questions_val_min))

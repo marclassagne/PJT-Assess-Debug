@@ -9,8 +9,8 @@
 				<th>Type</th>
 				<th>Method</th>
 				<th>Number of assessed points</th>
-				<th>Assess another point</th>
-				<th>Display utility graph</th>
+				<th>Assessment</th>
+				<th> utility </th>
 				<th>Reset assessements</th>
 			</tr>
 		</thead>

@@ -550,11 +550,7 @@
 							var final_gain = parseInt($('#final_proba').val());
 							var final_utility = arbre_cepv.questions_proba_haut;
 							console.log(final_utility)
-							console.log(parseFloat(arbre_cepv.questions_val_max))
-							console.log(parseFloat(arbre_cepv.questions_val_min))
-							console.log(arbre_cepv.questions_proba_haut);
-							console.log(utility_finder(parseFloat(arbre_cepv.questions_val_max)));
-							console.log(utility_finder(parseFloat(arbre_cepv.questions_val_min)));
+							console.log(final_gain);
                                                         
 							//if (final_gain <= parseFloat(arbre_cepv.questions_val_max) && final_gain >= parseFloat(arbre_cepv.questions_val_min)) {
 								// we save it

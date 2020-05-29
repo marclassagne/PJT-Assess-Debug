@@ -528,7 +528,7 @@
 							$('#lottery').hide();
 							arbre_cepv.questions_val_mean = gain + ' ' + unit;
 							arbre_cepv.update();
-							ask_final_value(Math.round((max_interval + min_interval) * 100 / 2) / 100);
+							ask_final_value(((max_interval + min_interval) * 100 / 2) / 100);
 						} else {
 							arbre_cepv.questions_val_mean = gain + ' ' + unit;
 							arbre_cepv.update();

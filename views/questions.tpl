@@ -552,14 +552,20 @@
 							var final_utility = arbre_cepv.questions_proba_haut;
 							console.log(final_utility)
 							console.log(final_gain);
-                                                        
+                                                       
 							if (final_gain <= parseFloat(arbre_cepv.questions_val_max) && final_gain >= parseFloat(arbre_cepv.questions_val_min)) {
 								// we save it
 								assess_session.attributes[indice].questionnaire.points[String(final_gain)]=parseFloat(final_utility);
-								
-								
-								
-								assess_session.attributes[indice].questionnaire.number += 1;
+								console.log(Object.keys(assess_session.attributes[indice].questionnaire.points))
+								var  point_cepv= Object.keys(assess_session.attributes[indice].questionnaire.points).length
+								var  number_cepv = assess_session.attributes[indice].questionnaire.number
+								console.log( point_cepv)
+								console.log( number_cepv)
+								if ( point_cepv == number_cepv ){
+									assess_session.attributes[indice].questionnaire.number += 1;
+								}
+								console.log( point_cepv)
+								console.log( number_cepv)
 								// backup local
 								localStorage.setItem("assess_session", JSON.stringify(assess_session));
 								// we reload the page
